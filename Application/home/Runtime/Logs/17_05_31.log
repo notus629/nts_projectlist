@@ -1,0 +1,9 @@
+[ 2017-05-31T20:24:12+08:00 ] 127.0.0.1 /AlVirtualHost/index.php/Index/add
+ERR: 非法操作:add
+
+[ 2017-05-31T20:24:17+08:00 ] 127.0.0.1 /AlVirtualHost/index.php/Index/add
+ERR: 非法操作:add
+
+[ 2017-05-31T20:34:35+08:00 ] 127.0.0.1 /AlVirtualHost/index.php/Index/del/id/0001
+ERR: Action:delete您所请求的方法不存在！
+
