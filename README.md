@@ -12,6 +12,6 @@
 ## 数据库
 *  Application/public/sql/nts_projects.sql
 
-##服务器环境
+## 服务器环境
 * Windows 10
 * WAMPSERVER3.0.6 64bit (Apache2.4.23, PHP5.6.25)
