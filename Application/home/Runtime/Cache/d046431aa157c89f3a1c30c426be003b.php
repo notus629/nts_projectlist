@@ -70,9 +70,11 @@
 <body>
 <div class="container">
     <h2 class="text-success text-center mytitle "> Notus 项目列表 </h2>
-    <div>
-        <button id="add" class="btn btn-info">添加新项目</button>
-    </div>
+    <?php if($admin): ?><div>
+            <button id="add" class="btn btn-info">添加新项目</button>
+            <a href="__URL__/../Man/logout" class="btn btn-primary">退出</a>
+        </div><?php endif; ?>
+
     <table class="table table-striped table-bordered table-hover" id="mytable">
         <thead>
         <tr class="danger">
@@ -81,7 +83,7 @@
             <th class="item_create">添加时间</th>
             <th class="item_modify">修改时间</th>
             <th class="item_des">说明</th>
-            <th class="item_op">操作</th>
+            <?php if($admin): ?><th class="item_op">操作</th><?php endif; ?>
         </tr>
         </thead>
         <tbody>
@@ -91,10 +93,10 @@
                 <td><?php echo ($vo["create_at"]); ?></td>
                 <td><?php echo ($vo["modify_at"]); ?></td>
                 <td><?php echo ($vo["description"]); ?></td>
-                <td class="item_op">
-                    <a href="__URL__/mod/id/<?php echo ($vo["id"]); ?>" class="btn btn-sm btn-primary">修改</a>
-                    <a href="__URL__/del/id/<?php echo ($vo["id"]); ?>" class="btn btn-sm btn-danger">删除</a>
-                </td>
+                <?php if($admin): ?><td class="item_op">
+                        <a href="__URL__/mod/id/<?php echo ($vo["id"]); ?>" class="btn btn-sm btn-primary">修改</a>
+                        <a href="__URL__/del/id/<?php echo ($vo["id"]); ?>" class="btn btn-sm btn-danger">删除</a>
+                    </td><?php endif; ?>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>

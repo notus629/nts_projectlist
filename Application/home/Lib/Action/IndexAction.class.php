@@ -6,6 +6,13 @@ class IndexAction extends Action {
         $m = M('projects');
         $projs = $m->order('create_at')->select();
         $this->assign('projects', $projs);
+
+        // 用户登录
+        $sessionkey = session_id().md5(md5('notus8549'));
+        if( session($sessionkey) ){
+            $this->assign('admin', true);
+        }
+
         $this->display();
     }
 

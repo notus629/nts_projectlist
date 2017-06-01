@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2017 at 04:27 PM
+-- Generation Time: Jun 01, 2017 at 07:48 PM
 -- Server version: 5.7.14-log
 -- PHP Version: 5.6.25
 
@@ -52,6 +52,27 @@ INSERT INTO `nts_projects` (`id`, `name`, `description`, `create_at`, `modify_at
 (20, 'fewf', '2fe2e', '2017-06-01 07:58:29', '2017-06-01 07:58:29', 1),
 (21, 'fewf', 'fewfewf', '2017-06-01 07:58:34', '2017-06-01 07:58:34', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nts_user`
+--
+
+CREATE TABLE `nts_user` (
+  `id` tinyint(3) UNSIGNED NOT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `previlege` tinyint(3) UNSIGNED NOT NULL DEFAULT '1' COMMENT '权限'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员和用户表';
+
+--
+-- Dumping data for table `nts_user`
+--
+
+INSERT INTO `nts_user` (`id`, `email`, `name`, `password`, `previlege`) VALUES
+(1, NULL, 'notus', 'ba00819f263287af1ff0100c5a323355', 1);
+
 --
 -- Indexes for dumped tables
 --
@@ -63,6 +84,14 @@ ALTER TABLE `nts_projects`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `nts_user`
+--
+ALTER TABLE `nts_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -71,6 +100,11 @@ ALTER TABLE `nts_projects`
 --
 ALTER TABLE `nts_projects`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `nts_user`
+--
+ALTER TABLE `nts_user`
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
