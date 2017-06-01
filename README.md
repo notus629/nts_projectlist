@@ -9,7 +9,7 @@
 
 ## 服务器环境
 * Windows 10
-* WAMPSERVER3.0.6 64bit (Apache2.4.23, PHP5.6.25)
+* WAMPSERVER3.0.6 64bit (Apache2.4.23, PHP5.6.25, MySQL5.7.14)
 
 ## 项目依赖
 * ThinkPHP_3.1.3_full
