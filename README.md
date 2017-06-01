@@ -1,7 +1,7 @@
 # nts_projectlist
 * Personal project management table.
 * 演示地址: [http://xm.bugber.com](http://xm.bugber.com)
-* Notus(hehe_xiao@qq.com)
+* Author: Notus(hehe_xiao@qq.com)
 
 ## 项目依赖
 * ThinkPHP_3.1.3_full
