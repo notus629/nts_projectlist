@@ -60,6 +60,7 @@
 
         .item_des {
             max-width: 350px;
+            min-width: 200px;
             word-break: break-all;
         }
 
@@ -79,7 +80,7 @@
     <h2 class="text-success text-center mytitle "> Notus 项目列表 </h2>
     <?php if($admin): ?><div>
             <button id="add" class="btn btn-info">添加新项目</button>
-            <a href="__URL__/../Man/logout" class="btn btn-primary">退出</a>
+            <a href="__URL__/../Man/logout" class="btn btn-warning">退出</a>
         </div><?php endif; ?>
 
     <table class="table table-striped table-bordered" id="mytable">
@@ -96,7 +97,7 @@
         <tbody>
         <?php if(is_array($projects)): $i = 0; $__LIST__ = $projects;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <td class="item_no"><?php echo ($i); ?></td>
-                <td><?php echo ($vo["name"]); ?></td>
+                <td class="text-info"><?php echo ($vo["name"]); ?></td>
                 <td><?php echo ($vo["create_at"]); ?></td>
                 <td><?php echo ($vo["modify_at"]); ?></td>
                 <td><?php echo ($vo["description"]); ?></td>

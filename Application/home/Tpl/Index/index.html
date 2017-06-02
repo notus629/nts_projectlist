@@ -60,6 +60,7 @@
 
         .item_des {
             max-width: 350px;
+            min-width: 200px;
             word-break: break-all;
         }
 
@@ -80,7 +81,7 @@
     <if condition="$admin">
         <div>
             <button id="add" class="btn btn-info">添加新项目</button>
-            <a href="__URL__/../Man/logout" class="btn btn-primary">退出</a>
+            <a href="__URL__/../Man/logout" class="btn btn-warning">退出</a>
         </div>
     </if>
 
@@ -101,7 +102,7 @@
         <volist name="projects" id="vo">
             <tr>
                 <td class="item_no">{{$i}}</td>
-                <td>{{$vo.name}}</td>
+                <td class="text-info">{{$vo.name}}</td>
                 <td>{{$vo.create_at}}</td>
                 <td>{{$vo.modify_at}}</td>
                 <td>{{$vo.description}}</td>
