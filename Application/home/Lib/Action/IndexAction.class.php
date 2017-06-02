@@ -24,6 +24,8 @@ class IndexAction extends Action {
         $m = M('projects');
         $data['name'] = $_POST['name'];
         $data['description'] = $_POST['description'];
+        $data['create_at'] = date('Y-m-d H:i:s');
+        $data['modify_at'] = date('Y-m-d H:i:s');
         if( ( $id = $m->add($data) ) > 0){
             $this->success("添加项目成功!", "__APP__");
         } else {
@@ -44,6 +46,7 @@ class IndexAction extends Action {
         $data['id'] = $_POST['id'];
         $data['name'] = $_POST['name'];
         $data['description'] = $_POST['description'];
+        $data['modify_at'] = date('Y-m-d H:i:s');
         if( $m->save($data) > 0){
             $this->success("项目信息更新成功", "__APP__");
         } else {

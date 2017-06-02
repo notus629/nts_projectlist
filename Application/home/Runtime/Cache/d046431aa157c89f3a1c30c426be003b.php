@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <title>Notus' Web Road</title>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-    <link  rel="stylesheet" href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -18,7 +18,14 @@
 
             $('#add').on('click', function(){
                 window.location = "__URL__/add";
-            })
+            });
+
+            $('tbody tr').on('mouseover', function(){
+                $(this).addClass('danger');
+            });
+            $('tbody tr').on('mouseout', function(){
+                $(this).removeClass('danger');
+            });
 
         });
         // Disable search and ordering by default
@@ -75,9 +82,9 @@
             <a href="__URL__/../Man/logout" class="btn btn-primary">退出</a>
         </div><?php endif; ?>
 
-    <table class="table table-striped table-bordered table-hover" id="mytable">
+    <table class="table table-striped table-bordered" id="mytable">
         <thead>
-        <tr class="danger">
+        <tr class="info">
             <th class="item_no">编号</th>
             <th class="item_name">项目名称</th>
             <th class="item_create">添加时间</th>
@@ -100,6 +107,7 @@
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>
+
     <div class="footer-copyright" align='center'>©&nbsp;2017&nbsp;bugber.com&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/">闽ICP备 17001253号</a>    bugber@bugber.com</div>
 </div>
 </body>

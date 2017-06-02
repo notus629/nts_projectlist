@@ -6,6 +6,7 @@
 ## 说明
 * 简单项目管理前后台
 * 后台可以添加/修改
+* 后台登录地址：/Application/Man
 
 ## 服务器环境
 * Windows 10
@@ -14,8 +15,8 @@
 ## 项目依赖
 * ThinkPHP_3.1.3_full
 * Bootstrap
-* datatables
-* jquery
+* DataTables
+* jQuery
  
 ## 数据库
 *  Application/public/sql/data.sql

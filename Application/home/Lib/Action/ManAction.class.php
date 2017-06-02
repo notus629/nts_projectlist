@@ -13,12 +13,13 @@ class ManAction extends Action {
         if ( !session($sessionkey) ){
             $this->display();
         } else {
-            $m = M('projects');
-            $projs = $m->order('create_at')->select();
-            $index = A('Index');
-            $index->assign('projects', $projs);
-            $index->assign('admin', true);
-            $index->display("Index:index");
+//            $m = M('projects');
+//            $projs = $m->order('create_at')->select();
+//            $index = A('Index');
+//            $index->assign('projects', $projs);
+//            $index->assign('admin', true);
+//            $index->display("Index:index");
+            $this->redirect('Index/index');
         }
     }
 
