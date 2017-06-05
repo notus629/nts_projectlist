@@ -4,6 +4,6 @@ return array(
     'TMPL_L_DELIM' => '{{',
     'TMPL_R_DELIM' => '}}',
     'SHOW_PAGE_TRACE' => true,
-    'DB_DSN' => 'mysql://root:@localhost:3306/aliphp',
-    'DB_PREFIX' => 'nts_',
+    'DB_DSN' => 'mysql://test:test@localhost:3306/tp31',
+    'DB_PREFIX' => 'tp_',
 );

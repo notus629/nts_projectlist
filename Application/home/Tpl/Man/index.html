@@ -20,12 +20,21 @@
         <form action="__URL__/login" method="post">
             <div class="form-group">
                 <label for="name">用户名</label>
-                <input type="text" class="form-control" id="name" placeholder="用户名" required autofocus tabindex="1" name="name">
+                <input type="text" class="form-control" id="name" placeholder="请输入用户名" required autofocus tabindex="1" name="name">
             </div>
             <div class="form-group">
                 <label for="pwd">密码</label>
-                <input type="password" class="form-control" id="pwd" placeholder="密码" required tabindex="2" name="pwd">
+                <input type="password" class="form-control" id="pwd" placeholder="请输入密码" required tabindex="2" name="pwd">
             </div>
+            <div class="form-group">
+                <label for="verify">验证码</label>
+                <input type="text" class="form-control" id="verify" placeholder="请输入验证码" required tabindex="2" name="verify">
+                <div>
+                    <img src="__APP__/Public/verify" alt="验证码" onclick="this.src='__APP__/Public/verify'+'?'+Math.random()" onmouseover="this.style.cursor='pointer'" title="点击刷新">
+                </div>
+
+            </div>
+            
             <button type="submit" class="btn btn-success btn-block">登录</button>
         </form>
     </div>

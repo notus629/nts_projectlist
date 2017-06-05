@@ -24,9 +24,14 @@ class ManAction extends Action {
     }
 
     public function login(){
-        $m = M('user');
+        $verify = $_POST['verify'];
+        //dump($verify);exit;
+        if($_SESSION['verify'] != md5($verify)){
+            $this->error('验证码输入错误!');
+        }
         $name = $_POST['name'];
         $pwd = $_POST['pwd'];
+        $m = M('users');
         $dbpwd = $m->where("name='".$name."'")->getField('password');
 
         if( !$dbpwd ){
